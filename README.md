@@ -1,41 +1,44 @@
-# Project Title
+# Degen Token Assessment
 
-Simple overview of use/purpose.
+This is a assessment project for Metacrafters Module 4.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+This project consists of a token that the owner can mint and transfer to other users. Any user can then redeem the token for an NFT.
 
 ## Getting Started
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+```
+npm install
+```
+
+Create a .env file with these 2 variables:
+```
+SNOWTRACE_API_KEY = *Your snowtrace API key*
+WALLET_PRIVATE_KEY = *Your private key (Obviously use a throwaway account)*
+```
+
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+Compile the smart contracts
 ```
-code blocks for commands
+npx hardhat compile
 ```
-
-## Help
-
-Any advise for common problems or issues.
+Deploy the contract to testnet
 ```
-command to run if program contains helper info
+npx hardhat run scripts/deploy.js --network fuji
 ```
+You now have the project deployed, and can interact with it via browser wallet and/or snowtrace.
 
 ## Authors
 
-Contributors names and contact info
+Iaroslav Titov
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
+Based on Metacrafters assessment starter project
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the MIT License
